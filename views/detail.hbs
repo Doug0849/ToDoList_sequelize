@@ -1,4 +1,4 @@
-<form action="/todos/{{ todo.id }}?_method=DELETE" method="POST" style="display: inline;">
+<form action="/todos/{{ todo.id }}?_method=DELETE" method="POST" style="display: inline;" onsubmit="return CheckDelete()">
   <div class="input-group">
     <div class="input-group-text">
       <input type="checkbox" name="isDone" {{#if todo.isDone }} checked {{/if}} disabled>
@@ -8,3 +8,5 @@
     <button class="btn btn-danger" type="submit">delete</button>
   </div>
 </form>
+
+<script src="/javascripts/checkDelete.js"></script>
